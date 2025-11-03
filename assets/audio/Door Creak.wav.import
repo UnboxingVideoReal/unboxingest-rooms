@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cna41puktbpxa"
+path="res://.godot/imported/Door Creak.wav-7a66a5f72d20e340cc053f1554160be0.sample"
+
+[deps]
+
+source_file="res://assets/audio/Door Creak.wav"
+dest_files=["res://.godot/imported/Door Creak.wav-7a66a5f72d20e340cc053f1554160be0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

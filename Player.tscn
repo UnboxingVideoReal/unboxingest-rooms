@@ -1,0 +1,41 @@
+[gd_scene load_steps=13 format=3 uid="uid://b62jg3im8m6e5"]
+
+[ext_resource type="Texture2D" uid="uid://djki5aj01870i" path="res://assets/images/gunga.png" id="1_xhfnw"]
+[ext_resource type="Script" uid="uid://dri7tvb1d5hud" path="res://Player.cs" id="2_kpjcp"]
+[ext_resource type="AudioStream" uid="uid://cngw7hsll0rf0" path="res://assets/audio/WalkCarpet1.mp3" id="3_hp6x6"]
+[ext_resource type="AudioStream" uid="uid://duvgb22tldai8" path="res://assets/audio/WalkCarpet2.mp3" id="4_3tkgg"]
+[ext_resource type="AudioStream" uid="uid://bwcmoj1blr8um" path="res://assets/audio/WalkCarpet3.mp3" id="5_l6ohk"]
+[ext_resource type="AudioStream" uid="uid://4n0oyv0m3lw3" path="res://assets/audio/WalkCarpet4.mp3" id="6_oudfo"]
+[ext_resource type="AudioStream" uid="uid://cx7r82ymta1iy" path="res://assets/audio/WalkCarpet5.mp3" id="7_d6rpx"]
+[ext_resource type="AudioStream" uid="uid://0bnpx1al0lc" path="res://assets/audio/WalkCarpet6.mp3" id="8_r3kul"]
+[ext_resource type="AudioStream" uid="uid://dsxspjukecyci" path="res://assets/audio/WalkCarpet7.mp3" id="9_jatw7"]
+[ext_resource type="AudioStream" uid="uid://j5nvk5jsdsmg" path="res://assets/audio/WalkCarpet8.mp3" id="10_rv870"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xhfnw"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_efikj"]
+streams_count = 8
+stream_0/stream = ExtResource("3_hp6x6")
+stream_1/stream = ExtResource("4_3tkgg")
+stream_2/stream = ExtResource("5_l6ohk")
+stream_3/stream = ExtResource("6_oudfo")
+stream_4/stream = ExtResource("7_d6rpx")
+stream_5/stream = ExtResource("8_r3kul")
+stream_6/stream = ExtResource("9_jatw7")
+stream_7/stream = ExtResource("10_rv870")
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 3
+scale = Vector2(1.5, 1.5)
+script = ExtResource("2_kpjcp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_xhfnw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 48)
+shape = SubResource("RectangleShape2D_xhfnw")
+
+[node name="Carpet" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_efikj")

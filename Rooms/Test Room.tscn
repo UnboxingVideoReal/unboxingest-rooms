@@ -1,0 +1,118 @@
+[gd_scene load_steps=16 format=3 uid="uid://c8l5gmq5828p0"]
+
+[ext_resource type="Texture2D" uid="uid://c8y30w860cent" path="res://assets/images/costume1.png" id="1_2this"]
+[ext_resource type="Texture2D" uid="uid://cwuq011fyoqmo" path="res://assets/images/costume2.svg" id="1_g36js"]
+[ext_resource type="Texture2D" uid="uid://6bmbl1l08rv5" path="res://assets/images/costume1.svg" id="2_2this"]
+[ext_resource type="PackedScene" uid="uid://dogdvnlagdhh8" path="res://Door.tscn" id="3_2this"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g36js"]
+normal = Vector2(0, 1)
+distance = 628.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2this"]
+normal = Vector2(1, 0)
+distance = 1.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sp61m"]
+normal = Vector2(-1, 0)
+distance = -1919.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7yano"]
+distance = -1079.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lr8uc"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ieubj"]
+normal = Vector2(-1, 0)
+distance = -1920.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3cfqm"]
+distance = -1080.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6ay16"]
+normal = Vector2(0, 1)
+distance = 627.5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sp61m"]
+atlas = ExtResource("1_2this")
+region = Rect2(0, 0, 2560, 161)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yano"]
+atlas = ExtResource("1_2this")
+region = Rect2(2560, 0, 2560, 161)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lr8uc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sp61m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7yano")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Room" type="Node2D"]
+
+[node name="Wall" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_g36js")
+
+[node name="Floor" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(960, 1175)
+scale = Vector2(1.5, 1.362)
+texture = ExtResource("2_2this")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D2"]
+
+[node name="up" type="CollisionShape2D" parent="StaticBody2D2/Area2D"]
+z_index = 5
+shape = SubResource("WorldBoundaryShape2D_g36js")
+
+[node name="left" type="CollisionShape2D" parent="StaticBody2D2/Area2D"]
+z_index = 5
+shape = SubResource("WorldBoundaryShape2D_2this")
+
+[node name="right" type="CollisionShape2D" parent="StaticBody2D2/Area2D"]
+z_index = 5
+shape = SubResource("WorldBoundaryShape2D_sp61m")
+
+[node name="down" type="CollisionShape2D" parent="StaticBody2D2/Area2D"]
+z_index = 5
+shape = SubResource("WorldBoundaryShape2D_7yano")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="left2" type="CollisionShape2D" parent="StaticBody2D"]
+z_index = 5
+shape = SubResource("WorldBoundaryShape2D_lr8uc")
+
+[node name="right2" type="CollisionShape2D" parent="StaticBody2D"]
+z_index = 5
+shape = SubResource("WorldBoundaryShape2D_ieubj")
+
+[node name="down2" type="CollisionShape2D" parent="StaticBody2D"]
+z_index = 5
+shape = SubResource("WorldBoundaryShape2D_3cfqm")
+
+[node name="up2" type="CollisionShape2D" parent="StaticBody2D"]
+z_index = 5
+shape = SubResource("WorldBoundaryShape2D_6ay16")
+
+[node name="Door" parent="." instance=ExtResource("3_2this")]
+position = Vector2(960, 880)
+frame = 4
+
+[node name="Wall2" type="AnimatedSprite2D" parent="."]
+z_index = 5
+position = Vector2(960, 1017.5)
+scale = Vector2(0.776, 0.776)
+sprite_frames = SubResource("SpriteFrames_lr8uc")

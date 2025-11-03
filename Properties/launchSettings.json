@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "unboxingest rooms": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\notun\\Downloads\\Godot_v4.4.1-stable_mono_win64\\Godot_v4.4.1-stable_mono_win64\\Godot_v4.4.1-stable_mono_win64.exe",
+      "workingDirectory": "C:\\Users\\notun\\Documents\\unboxingestRooms"
+    }
+  }
+}
