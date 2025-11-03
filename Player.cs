@@ -10,13 +10,20 @@ public partial class Player : CharacterBody2D
     public string floorsound = "Carpet";
     private int wawa = 0;
     string[] possibleDirs = ["left", "right", "up", "down"];
+    bool opened = false;
+
 
     public override void _Process(double delta)
     {
         Area2D plane = Main.currentRoom.GetNode<StaticBody2D>("StaticBody2D2").GetNode<Area2D>("Area2D");
-        if (Door.touching && plane.HasOverlappingBodies())
+        if (Door.touching && plane.HasOverlappingBodies() && Door.open && !opened)
         {
             Main.newRoom();
+            opened = true;
+            GetTree().CreateTimer(0.5).Timeout += () =>
+            {
+                opened = false;
+            };
         }
     }
 

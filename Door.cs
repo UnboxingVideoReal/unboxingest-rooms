@@ -12,7 +12,7 @@ public partial class Door : AnimatedSprite2D
     string[] possibleDirs = ["left", "right", "up", "down"];
     public static string dir;
 
-    bool open = false;
+    public static bool open = false;
 
     public static bool touching = false;
 
@@ -23,6 +23,7 @@ public partial class Door : AnimatedSprite2D
     public void onRoom()
     {
         GD.Print("door");
+        open = false;
         Main.currentRoom = GetTree().CurrentScene.GetNode<Node2D>("CurRoom").GetNode<Node2D>("Room");
         dir = possibleDirs[Main.rand.RandiRange(0, 3)];
         GetNode<AnimatedSprite2D>("UpDoor").Visible = false;

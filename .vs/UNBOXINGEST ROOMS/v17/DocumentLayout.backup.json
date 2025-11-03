@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\notun\\Documents\\UnboxingestRooms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E567ECD1-12D1-4DFD-AB3C-73DE0027795F}|Unboxingest Rooms.csproj|c:\\users\\notun\\documents\\unboxingestrooms\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E567ECD1-12D1-4DFD-AB3C-73DE0027795F}|Unboxingest Rooms.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E567ECD1-12D1-4DFD-AB3C-73DE0027795F}|Unboxingest Rooms.csproj|c:\\users\\notun\\documents\\unboxingestrooms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E567ECD1-12D1-4DFD-AB3C-73DE0027795F}|Unboxingest Rooms.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E567ECD1-12D1-4DFD-AB3C-73DE0027795F}|Unboxingest Rooms.csproj|c:\\users\\notun\\documents\\unboxingestrooms\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E567ECD1-12D1-4DFD-AB3C-73DE0027795F}|Unboxingest Rooms.csproj|solutionrelative:door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E567ECD1-12D1-4DFD-AB3C-73DE0027795F}|Unboxingest Rooms.csproj|c:\\users\\notun\\documents\\unboxingestrooms\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E567ECD1-12D1-4DFD-AB3C-73DE0027795F}|Unboxingest Rooms.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E567ECD1-12D1-4DFD-AB3C-73DE0027795F}|Unboxingest Rooms.csproj|c:\\users\\notun\\documents\\unboxingestrooms\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E567ECD1-12D1-4DFD-AB3C-73DE0027795F}|Unboxingest Rooms.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E567ECD1-12D1-4DFD-AB3C-73DE0027795F}|Unboxingest Rooms.csproj|c:\\users\\notun\\documents\\unboxingestrooms\\unboxingest rooms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -46,8 +46,7 @@
               "RelativeToolTip": "Rooms\\Room.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T04:09:29.362Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T04:09:29.362Z"
             },
             {
               "$type": "Document",
@@ -59,44 +58,42 @@
               "RelativeToolTip": "Abstract\\UR_CharacterBody2D.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAArwAkAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T03:44:20.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T03:44:20.784Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Unboxingest Rooms",
+              "Title": "Unboxingest Rooms.csproj",
               "DocumentMoniker": "C:\\USERS\\NOTUN\\DOCUMENTS\\UNBOXINGESTROOMS\\Unboxingest Rooms.csproj",
               "RelativeDocumentMoniker": "Unboxingest Rooms.csproj",
               "ToolTip": "C:\\USERS\\NOTUN\\DOCUMENTS\\UNBOXINGESTROOMS\\Unboxingest Rooms.csproj",
               "RelativeToolTip": "Unboxingest Rooms.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-02T03:43:57.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T03:43:57.619Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\UnboxingestRooms\\Player.cs",
               "RelativeDocumentMoniker": "Player.cs",
               "ToolTip": "C:\\Users\\notun\\Documents\\UnboxingestRooms\\Player.cs",
               "RelativeToolTip": "Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBQAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-02T03:36:59.014Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Main.cs",
               "DocumentMoniker": "C:\\Users\\notun\\Documents\\UnboxingestRooms\\Main.cs",
               "RelativeDocumentMoniker": "Main.cs",
               "ToolTip": "C:\\Users\\notun\\Documents\\UnboxingestRooms\\Main.cs",
               "RelativeToolTip": "Main.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-02T03:36:50.314Z",
               "EditorCaption": ""
@@ -109,7 +106,7 @@
               "RelativeDocumentMoniker": "Door.cs",
               "ToolTip": "C:\\Users\\notun\\Documents\\UnboxingestRooms\\Door.cs",
               "RelativeToolTip": "Door.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAYwEsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-02T03:14:24.087Z",
               "EditorCaption": ""

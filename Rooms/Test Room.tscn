@@ -90,6 +90,8 @@ z_index = 5
 shape = SubResource("WorldBoundaryShape2D_7yano")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
 [node name="left2" type="CollisionShape2D" parent="StaticBody2D"]
 z_index = 5
