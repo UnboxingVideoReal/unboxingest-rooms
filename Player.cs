@@ -20,7 +20,7 @@ public partial class Player : CharacterBody2D
         {
             Main.newRoom();
             opened = true;
-            GetTree().CreateTimer(0.5).Timeout += () =>
+            GetTree().CreateTimer(0.2).Timeout += () =>
             {
                 opened = false;
             };
@@ -30,7 +30,22 @@ public partial class Player : CharacterBody2D
     public void onRoom()
     {
         GD.Print("player");
-        Position = new Vector2(175, 825);
+        if (Door.dir == "right")
+        {
+            Position = new Vector2(175, 825);
+        }
+        else if (Door.dir == "left")
+        {
+            Position = new Vector2(1745, 825);
+        }
+        else if (Door.dir == "up")
+        {
+            Position = new Vector2(960, 950);
+        }
+        else if (Door.dir == "down")
+        {
+            Position = new Vector2(960, 600);
+        }
     }
     public override void _PhysicsProcess(double delta)
     {
