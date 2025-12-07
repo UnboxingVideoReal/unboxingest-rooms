@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dogdvnlagdhh8"]
+[gd_scene load_steps=27 format=3 uid="uid://dogdvnlagdhh8"]
 
 [ext_resource type="Texture2D" uid="uid://bxniw1fqcnj4m" path="res://assets/images/doors.png" id="1_1vvux"]
 [ext_resource type="Script" uid="uid://4gb3ebgah0tq" path="res://Door.cs" id="2_iu8q0"]
@@ -7,6 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://tluftsssb450" path="res://assets/audio/2.wav" id="4_r6baa"]
 [ext_resource type="AudioStream" uid="uid://m1hy55gc2m8b" path="res://assets/audio/3.wav" id="5_idmte"]
 [ext_resource type="AudioStream" uid="uid://cna41puktbpxa" path="res://assets/audio/Door Creak.wav" id="6_r6baa"]
+[ext_resource type="Texture2D" uid="uid://b3hyfapyosj44" path="res://assets/images/doorlabel.png" id="8_e2xr8"]
+[ext_resource type="FontFile" uid="uid://dhaxmejhuo08t" path="res://assets/fonts/EB Garamond.ttf" id="9_7kus2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iu8q0"]
 atlas = ExtResource("1_1vvux")
@@ -95,12 +97,34 @@ size = Vector2(120, 210)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7kus2"]
 size = Vector2(121, 210)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kus2"]
+atlas = ExtResource("8_e2xr8")
+region = Rect2(0, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nf3sg"]
+atlas = ExtResource("8_e2xr8")
+region = Rect2(300, 0, 300, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ejk8t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kus2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nf3sg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Door" type="AnimatedSprite2D"]
 z_index = 4
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_ip411")
 animation = &"new_animation"
-frame = 3
+frame = 2
 script = ExtResource("2_iu8q0")
 
 [node name="UpDoor" type="AnimatedSprite2D" parent="."]
@@ -131,3 +155,19 @@ disabled = true
 position = Vector2(-8.5, 0)
 shape = SubResource("RectangleShape2D_7kus2")
 disabled = true
+
+[node name="Label" type="AnimatedSprite2D" parent="."]
+z_index = 6
+sprite_frames = SubResource("SpriteFrames_ejk8t")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Label"]
+offset_left = -54.0
+offset_top = -139.0
+offset_right = 54.0
+offset_bottom = -100.0
+theme_override_fonts/normal_font = ExtResource("9_7kus2")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[color=black]A-000"
+horizontal_alignment = 1
+vertical_alignment = 1

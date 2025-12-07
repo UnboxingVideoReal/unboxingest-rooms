@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b044q647fytm7"]
+[gd_scene load_steps=5 format=3 uid="uid://b044q647fytm7"]
 
 [ext_resource type="Script" uid="uid://c4t2bcexbyrls" path="res://Main.cs" id="1_r0du0"]
 [ext_resource type="PackedScene" uid="uid://c8l5gmq5828p0" path="res://Rooms/Test Room.tscn" id="2_r0du0"]
 [ext_resource type="PackedScene" uid="uid://b62jg3im8m6e5" path="res://Player.tscn" id="4_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://d1i6coq16vqrk" path="res://UI.tscn" id="4_fos0i"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_r0du0")
@@ -13,3 +14,5 @@ position = Vector2(175, 825)
 [node name="CurRoom" type="Node2D" parent="."]
 
 [node name="Room" parent="CurRoom" instance=ExtResource("2_r0du0")]
+
+[node name="Control" parent="." instance=ExtResource("4_fos0i")]

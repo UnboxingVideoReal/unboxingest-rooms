@@ -111,7 +111,6 @@ shape = SubResource("WorldBoundaryShape2D_6ay16")
 
 [node name="Door" parent="." instance=ExtResource("3_2this")]
 position = Vector2(960, 880)
-frame = 4
 
 [node name="Wall2" type="AnimatedSprite2D" parent="."]
 z_index = 5

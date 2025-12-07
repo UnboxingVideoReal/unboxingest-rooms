@@ -27,6 +27,8 @@ public partial class Door : AnimatedSprite2D
         Main.currentRoom = GetTree().CurrentScene.GetNode<Node2D>("CurRoom").GetNode<Node2D>("Room");
         dir = possibleDirs[Main.rand.RandiRange(0, 3)];
         GetNode<AnimatedSprite2D>("UpDoor").Visible = false;
+        AnimatedSprite2D label = GetNode<AnimatedSprite2D>("Label");
+        label.GetNode<RichTextLabel>("RichTextLabel").Text = "[color=black]A-" + (Main.room + 1).ToString("D3");
         switch (dir)
         {
             case "left":
@@ -34,6 +36,7 @@ public partial class Door : AnimatedSprite2D
                 Scale = new Vector2(2, 2);
                 Frame = frameDoor[0];
                 GetNode<Area2D>("Area2D").GetNode<CollisionShape2D>(dir + "Collision").Disabled = false;
+                label.Visible = false;
 
                 Main.currentRoom.GetNode<AnimatedSprite2D>("Wall2").Frame = 1;
                 ZIndex = 4;
@@ -44,6 +47,8 @@ public partial class Door : AnimatedSprite2D
                 Scale = new Vector2(2, 2);
                 Frame = frameDoor[1];
                 GetNode<Area2D>("Area2D").GetNode<CollisionShape2D>(dir + "Collision").Disabled = false;
+                label.Visible = false;
+
                 Main.currentRoom.GetNode<AnimatedSprite2D>("Wall2").Frame = 1;
                 ZIndex = 4;
 
@@ -53,6 +58,10 @@ public partial class Door : AnimatedSprite2D
                 Scale = new Vector2(2, 2);
                 Frame = frameDoor[2];
                 GetNode<Area2D>("Area2D").GetNode<CollisionShape2D>(dir + "Collision").Disabled = false;
+                label.Visible = true;
+                label.Frame = 0;
+                label.GetNode<RichTextLabel>("RichTextLabel").Position = label.Position + new Vector2(-54.0f, -139.0f);
+
                 Main.currentRoom.GetNode<AnimatedSprite2D>("Wall2").Frame = 1;
                 ZIndex = 2;
 
@@ -62,6 +71,10 @@ public partial class Door : AnimatedSprite2D
                 Scale = new Vector2(2, 2);
                 Frame = frameDoor[3];
                 GetNode<Area2D>("Area2D").GetNode<CollisionShape2D>(dir + "Collision").Disabled = false;
+                label.Visible = true;
+                label.Frame = 1;
+                label.GetNode<RichTextLabel>("RichTextLabel").Position = label.Position + new Vector2(-54.0f, 64.5f);
+
                 Main.currentRoom.GetNode<AnimatedSprite2D>("Wall2").Frame = 0;
                 ZIndex = 4;
 

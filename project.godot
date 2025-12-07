@@ -20,7 +20,7 @@ v1.0, 3 betas in 1.0: v1.0[3]
 "
 config/version="{1}"
 run/main_scene="uid://b044q647fytm7"
-config/features=PackedStringArray("4.4", "C#", "Forward Plus")
+config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
