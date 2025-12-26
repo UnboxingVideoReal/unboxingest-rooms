@@ -56,7 +56,7 @@ public partial class Main : Node2D
         "u"
     };
 
-
+    public static string section = "A";
     public override void _Ready()
     {
         seed.Randomize();
@@ -90,7 +90,7 @@ public partial class Main : Node2D
         {
             for (int i = 0; i < sectionSize; i++)
             {
-                world.Add(i.ToString() + "," + sections[seed.RandiRange(0, sections.Length - 1)] + "," + "a"/*subSections[seed.RandiRange(0, subSections.Length - 1)]*/ + "," + roomTypes[seed.RandiRange(0, roomTypes.Length - 1)] + "," + directions[seed.RandiRange(0, directions.Length - 1)] + "-");
+                world.Add(i.ToString() + "," + section/*sections[seed.RandiRange(0, sections.Length - 1)]*/ + "," + section.ToLower()/*subSections[seed.RandiRange(0, subSections.Length - 1)]*/ + "," + roomTypes[seed.RandiRange(0, roomTypes.Length - 1)] + "," + directions[seed.RandiRange(0, directions.Length - 1)] + "-");
             }
         }
 
@@ -99,7 +99,7 @@ public partial class Main : Node2D
         str = str.Remove(str.Length - 1, 1);
         world.RemoveAt(world.Count - 1);
         world.Add(str);
-
+        List<string> tempSSection = new List<string>();
         // list subsections
         for (int y = 0; y < subSections.Length; y++)
         {
@@ -111,14 +111,16 @@ public partial class Main : Node2D
             {
                 int sSectionSize = 300 + seed.RandiRange(-200, 50);
                 int rand = seed.RandiRange(-10, 5);
-                for (int i = sSectionPoint[y] + rand; i <= sSectionSize; i++)
+                // sSectionPoint[y] + rand -- code for randomly selecting a starting point
+                //for (int i = sSectionPoint[y] + rand; i <= sSectionSize; i++)
+                //{
+                for (int i = 0; i < sSectionSize; i++)
                 {
-                    if (i >= 0 && i < world.Count)
-                    {
-                        world.Insert(i, i.ToString() + "," + sections[seed.RandiRange(0, sections.Length - 1)] + "," + subSections[y/*seed.RandiRange(0, subSections.Length - 1)*/] + "," + roomTypes[seed.RandiRange(0, roomTypes.Length - 1)] + "," + directions[seed.RandiRange(0, directions.Length - 1)] + "-");
-                    }
+                    tempSSection.Insert(i, i.ToString() + "," + sections[seed.RandiRange(0, sections.Length - 1)] + "," + subSections[y/*seed.RandiRange(0, subSections.Length - 1)*/] + "," + roomTypes[seed.RandiRange(0, roomTypes.Length - 1)] + "," + directions[seed.RandiRange(0, directions.Length - 1)] + "-");
                 }
-
+                //}
+                world.InsertRange(world.FindIndex(s => s.Contains($"{sSectionPoint[y] + rand},{section},{section.ToLower()},")), tempSSection);
+                tempSSection.Clear();
             }
         }
 

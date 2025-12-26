@@ -5,7 +5,62 @@
     <RootNamespace>UnboxingestRooms</RootNamespace>
     <OutputType>Library</OutputType>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="assets\audio\1.wav" />
+    <Content Include="assets\audio\2.wav" />
+    <Content Include="assets\audio\3.wav" />
+    <Content Include="assets\audio\Door Creak.wav" />
+    <Content Include="assets\audio\WalkCarpet1.mp3" />
+    <Content Include="assets\audio\WalkCarpet2.mp3" />
+    <Content Include="assets\audio\WalkCarpet3.mp3" />
+    <Content Include="assets\audio\WalkCarpet4.mp3" />
+    <Content Include="assets\audio\WalkCarpet5.mp3" />
+    <Content Include="assets\audio\WalkCarpet6.mp3" />
+    <Content Include="assets\audio\WalkCarpet7.mp3" />
+    <Content Include="assets\audio\WalkCarpet8.mp3" />
+    <Content Include="assets\fonts\EB Garamond.ttf" />
+    <Content Include="assets\images\costume1.png" />
+    <Content Include="assets\images\doorlabel.png" />
+    <Content Include="assets\images\doors.png" />
+    <Content Include="assets\images\gunga.png" />
+    <Content Include="assets\images\map.png" />
+    <Content Include="assets\images\upDoorAnim.png" />
+  </ItemGroup>
 	<ItemGroup>
-		<Folder Include="assets\" />
+	  <None Include="assets\audio\1.wav.import" />
+	  <None Include="assets\audio\2.wav.import" />
+	  <None Include="assets\audio\3.wav.import" />
+	  <None Include="assets\audio\Door Creak.wav.import" />
+	  <None Include="assets\audio\WalkCarpet1.mp3.import" />
+	  <None Include="assets\audio\WalkCarpet2.mp3.import" />
+	  <None Include="assets\audio\WalkCarpet3.mp3.import" />
+	  <None Include="assets\audio\WalkCarpet4.mp3.import" />
+	  <None Include="assets\audio\WalkCarpet5.mp3.import" />
+	  <None Include="assets\audio\WalkCarpet6.mp3.import" />
+	  <None Include="assets\audio\WalkCarpet7.mp3.import" />
+	  <None Include="assets\audio\WalkCarpet8.mp3.import" />
+	  <None Include="assets\fonts\EB Garamond.ttf.import" />
+	  <None Include="assets\images\a2_2.svg" />
+	  <None Include="assets\images\a2_2.svg.import" />
+	  <None Include="assets\images\a2_3.svg" />
+	  <None Include="assets\images\a2_3.svg.import" />
+	  <None Include="assets\images\a2_4.svg" />
+	  <None Include="assets\images\a2_4.svg.import" />
+	  <None Include="assets\images\a2_5.svg" />
+	  <None Include="assets\images\a2_5.svg.import" />
+	  <None Include="assets\images\a_1.svg" />
+	  <None Include="assets\images\a_1.svg.import" />
+	  <None Include="assets\images\a_2.svg" />
+	  <None Include="assets\images\a_2.svg.import" />
+	  <None Include="assets\images\costume1.png.import" />
+	  <None Include="assets\images\costume1.svg" />
+	  <None Include="assets\images\costume1.svg.import" />
+	  <None Include="assets\images\costume2.svg" />
+	  <None Include="assets\images\costume2.svg.import" />
+	  <None Include="assets\images\doorlabel.png.import" />
+	  <None Include="assets\images\doors.png.import" />
+	  <None Include="assets\images\gunga.png.import" />
+	  <None Include="assets\images\map.png.import" />
+	  <None Include="assets\images\upDoorAnim.png.import" />
 	</ItemGroup>
 </Project>

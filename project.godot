@@ -13,10 +13,11 @@ config_version=5
 config/name="unboxingest rooms"
 config/description="version system:
 
+() - small fix
 [] - beta
 {} - alpha
 
-v1.0, 3 betas in 1.0: v1.0[3] 
+v1.0, 3 fixes in 1.0: v1.0(3)
 "
 config/version="{1}"
 run/main_scene="uid://b044q647fytm7"
@@ -29,6 +30,14 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=2
 window/size/extend_to_title=true
+window/description="version system:
+
+() - small fix
+[] - beta
+{} - alpha
+
+v1.0, 3 fixes in 1.0: v1.0(3)
+"
 
 [dotnet]
 
