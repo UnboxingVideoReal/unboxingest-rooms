@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "Map.cs",
               "ToolTip": "C:\\Users\\notun\\Documents\\UnboxingestRooms\\Map.cs",
               "RelativeToolTip": "Map.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAUwDoAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-25T03:35:05.304Z",
               "IsPinned": true,
@@ -96,8 +96,7 @@
               "RelativeToolTip": "Rooms\\Room.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T04:09:29.362Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T04:09:29.362Z"
             },
             {
               "$type": "Document",
@@ -109,8 +108,7 @@
               "RelativeToolTip": "Abstract\\UR_CharacterBody2D.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAArwAkAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T03:44:20.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T03:44:20.784Z"
             },
             {
               "$type": "Document",
@@ -122,8 +120,7 @@
               "RelativeToolTip": "Unboxingest Rooms.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-02T03:43:57.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T03:43:57.619Z"
             },
             {
               "$type": "Document",
@@ -135,8 +132,7 @@
               "RelativeToolTip": "Player.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwBIAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T03:36:59.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T03:36:59.014Z"
             },
             {
               "$type": "Document",
@@ -148,8 +144,7 @@
               "RelativeToolTip": "Main.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T03:36:50.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T03:36:50.314Z"
             },
             {
               "$type": "Document",
@@ -161,8 +156,7 @@
               "RelativeToolTip": "Door.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAYwBYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T03:14:24.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T03:14:24.087Z"
             }
           ]
         }

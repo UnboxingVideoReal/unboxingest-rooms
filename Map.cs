@@ -30,7 +30,7 @@ public partial class Map : Control
         foreach (string room in seededRooms)
         {
 
-            if (wawa != 0)
+/*            if (wawa != 0)
             {
                 TextureRect rooom = GetNode<TextureRect>("room").Duplicate() as TextureRect;
                 AddChild(rooom);
@@ -38,29 +38,29 @@ public partial class Map : Control
                 string wawaw = room.Split(",")[4];
                 if (wawaw == "l-") // 1,A,a,a,l-
                 {
-                    rooom.Position = savedPos + new Vector2(5 + wawa, 0);
+                    rooom.GlobalPosition = savedPos + new Vector2(5 + wawa, 0);
                 }
                 else if (wawaw == "r-")
                 {
-                    rooom.Position = savedPos + new Vector2(5 - wawa, 0);
+                    rooom.GlobalPosition = savedPos + new Vector2(5 - wawa, 0);
                 }
                 else if (wawaw == "u-")
                 {
-                    rooom.Position = savedPos + new Vector2(wawa, 5 + wawa);
+                    rooom.GlobalPosition = savedPos + new Vector2(wawa, 5 + wawa);
                 }
                 else if (wawaw == "d-")
                 {
-                    rooom.Position = savedPos + new Vector2(wawa, 5 - wawa);
+                    rooom.GlobalPosition = savedPos + new Vector2(wawa, 5 - wawa);
                 }
-                savedPos = rooom.Position;
+                savedPos = rooom.GlobalPosition;
             }
             else
-            {
-                GetNode<TextureRect>("room").Position = startPos;
+            {*/
+                GetNode<TextureRect>("room").Position = new Vector2(1000,500);
                 FixControl(GetNode<TextureRect>("room"));
                 savedPos = GetNode<TextureRect>("room").Position;
-            }
-            wawa++;
+/*            }
+*/            wawa++;
         }
     }
     public override void _Process(double delta)
