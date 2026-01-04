@@ -30,19 +30,19 @@ public partial class Player : CharacterBody2D
     public void onRoom()
     {
         GD.Print("player");
-        if (Door.dir == "right")
+        if (Door.dir == "r-")
         {
             Position = new Vector2(175, 825);
         }
-        else if (Door.dir == "left")
+        else if (Door.dir == "l-")
         {
             Position = new Vector2(1745, 825);
         }
-        else if (Door.dir == "up")
+        else if (Door.dir == "u-")
         {
             Position = new Vector2(960, 950);
         }
-        else if (Door.dir == "down")
+        else if (Door.dir == "d-")
         {
             Position = new Vector2(960, 600);
         }

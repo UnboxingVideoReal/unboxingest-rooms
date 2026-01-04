@@ -57,12 +57,20 @@ public partial class Main : Node2D
     };
 
     public static string section = "A";
+
+    private static int kfdsa;
     public override void _Ready()
     {
-        seed.Randomize();
+        seed.Seed = 1/*.Randomize()*/;
         GD.Print(seed);
         seededRooms = RandomMap(1000, seed);
         Window.Position = new Vector2I(0, 0);
+        PackedScene map = (PackedScene)ResourceLoader.Load("res://Map.tscn");
+        Node map2 = map.Instantiate();
+        AddChild(map2);
+        PackedScene door = (PackedScene)ResourceLoader.Load("res://Door.tscn");
+        Node door2 = door.Instantiate();
+        GetTree().CurrentScene.GetNode<Node2D>("CurRoom").GetNode<Node2D>("Room").AddChild(door2);
     }
     public override void _Process(double delta)
     {
@@ -90,7 +98,11 @@ public partial class Main : Node2D
         {
             for (int i = 0; i < sectionSize; i++)
             {
-                world.Add(i.ToString() + "," + section/*sections[seed.RandiRange(0, sections.Length - 1)]*/ + "," + section.ToLower()/*subSections[seed.RandiRange(0, subSections.Length - 1)]*/ + "," + roomTypes[seed.RandiRange(0, roomTypes.Length - 1)] + "," + directions[seed.RandiRange(0, directions.Length - 1)] + "-");
+                if (i != 0)
+                {
+                    kfdsa = seed.RandiRange(0, directions.Where(x => x != $"{world[i-1].Split(",")[4][0]}").ToArray().Length - 1);
+                }
+                world.Add(i.ToString() + "," + section/*sections[seed.RandiRange(0, sections.Length - 1)]*/ + "," + section.ToLower()/*subSections[seed.RandiRange(0, subSections.Length - 1)]*/ + "," + roomTypes[seed.RandiRange(0, roomTypes.Length - 1)] + "," + directions[kfdsa] + "-");
             }
         }
 
@@ -116,7 +128,11 @@ public partial class Main : Node2D
                 //{
                 for (int i = 0; i < sSectionSize; i++)
                 {
-                    tempSSection.Insert(i, i.ToString() + "," + sections[seed.RandiRange(0, sections.Length - 1)] + "," + subSections[y/*seed.RandiRange(0, subSections.Length - 1)*/] + "," + roomTypes[seed.RandiRange(0, roomTypes.Length - 1)] + "," + directions[seed.RandiRange(0, directions.Length - 1)] + "-");
+                    if (i != 0)
+                    {
+                        kfdsa = seed.RandiRange(0, directions.Where(x => x != $"{world[i - 1].Split(",")[4][0]}").ToArray().Length - 1);
+                    }
+                    tempSSection.Insert(i, i.ToString() + "," + sections[seed.RandiRange(0, sections.Length - 1)] + "," + subSections[y/*seed.RandiRange(0, subSections.Length - 1)*/] + "," + roomTypes[seed.RandiRange(0, roomTypes.Length - 1)] + "," + directions[kfdsa] + "-");
                 }
                 //}
                 world.InsertRange(world.FindIndex(s => s.Contains($"{sSectionPoint[y] + rand},{section},{section.ToLower()},")), tempSSection);

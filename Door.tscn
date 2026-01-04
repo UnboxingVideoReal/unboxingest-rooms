@@ -136,22 +136,22 @@ pitch_scale = 0.67
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="downCollision" type="CollisionShape2D" parent="Area2D"]
+[node name="d-Collision" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 23)
 shape = SubResource("RectangleShape2D_r6baa")
 disabled = true
 
-[node name="upCollision" type="CollisionShape2D" parent="Area2D"]
+[node name="u-Collision" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 50.5)
 shape = SubResource("RectangleShape2D_idmte")
 disabled = true
 
-[node name="rightCollision" type="CollisionShape2D" parent="Area2D"]
+[node name="r-Collision" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(15, 0)
 shape = SubResource("RectangleShape2D_e2xr8")
 disabled = true
 
-[node name="leftCollision" type="CollisionShape2D" parent="Area2D"]
+[node name="l-Collision" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-8.5, 0)
 shape = SubResource("RectangleShape2D_7kus2")
 disabled = true

@@ -1,9 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://c8l5gmq5828p0"]
+[gd_scene load_steps=15 format=3 uid="uid://c8l5gmq5828p0"]
 
 [ext_resource type="Texture2D" uid="uid://c8y30w860cent" path="res://assets/images/costume1.png" id="1_2this"]
 [ext_resource type="Texture2D" uid="uid://cwuq011fyoqmo" path="res://assets/images/costume2.svg" id="1_g36js"]
 [ext_resource type="Texture2D" uid="uid://6bmbl1l08rv5" path="res://assets/images/costume1.svg" id="2_2this"]
-[ext_resource type="PackedScene" uid="uid://dogdvnlagdhh8" path="res://Door.tscn" id="3_2this"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g36js"]
 normal = Vector2(0, 1)
@@ -108,9 +107,6 @@ shape = SubResource("WorldBoundaryShape2D_3cfqm")
 [node name="up2" type="CollisionShape2D" parent="StaticBody2D"]
 z_index = 5
 shape = SubResource("WorldBoundaryShape2D_6ay16")
-
-[node name="Door" parent="." instance=ExtResource("3_2this")]
-position = Vector2(960, 880)
 
 [node name="Wall2" type="AnimatedSprite2D" parent="."]
 z_index = 5

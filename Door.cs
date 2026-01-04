@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Transactions;
 using UnboxingestRooms.Rooms;
@@ -9,7 +10,9 @@ public partial class Door : AnimatedSprite2D
     int[] frameDoor = [0, 1, 2, 4];
     int[] frameOnOpen = [2, 2, 3, 5];
 
-    string[] possibleDirs = ["left", "right", "up", "down"];
+    string[] possibleDirs = ["l-", "r-", "u-", "d-"];
+
+    List<string> seededRooms = Main.seededRooms;
     public static string dir;
 
     public static bool open = false;
@@ -25,13 +28,14 @@ public partial class Door : AnimatedSprite2D
         GD.Print("door");
         open = false;
         Main.currentRoom = GetTree().CurrentScene.GetNode<Node2D>("CurRoom").GetNode<Node2D>("Room");
-        dir = possibleDirs[Main.rand.RandiRange(0, 3)];
+        dir = seededRooms[Main.room].Split(",")[4];
+        GD.Print(dir);
         GetNode<AnimatedSprite2D>("UpDoor").Visible = false;
         AnimatedSprite2D label = GetNode<AnimatedSprite2D>("Label");
         label.GetNode<RichTextLabel>("RichTextLabel").Text = "[color=black]A-" + (Main.room + 1).ToString("D3");
         switch (dir)
         {
-            case "left":
+            case "l-":
                 Position = new Vector2(92, 750);
                 Scale = new Vector2(2, 2);
                 Frame = frameDoor[0];
@@ -42,7 +46,7 @@ public partial class Door : AnimatedSprite2D
                 ZIndex = 4;
 
                 break;
-            case "right":
+            case "r-":
                 Position = new Vector2(1827, 750);
                 Scale = new Vector2(2, 2);
                 Frame = frameDoor[1];
@@ -53,7 +57,7 @@ public partial class Door : AnimatedSprite2D
                 ZIndex = 4;
 
                 break;
-            case "up":
+            case "u-":
                 Position = new Vector2(960, 460);
                 Scale = new Vector2(2, 2);
                 Frame = frameDoor[2];
@@ -66,7 +70,7 @@ public partial class Door : AnimatedSprite2D
                 ZIndex = 2;
 
                 break;
-            case "down":
+            case "d-":
                 Position = new Vector2(960, 880);
                 Scale = new Vector2(2, 2);
                 Frame = frameDoor[3];
@@ -97,7 +101,7 @@ public partial class Door : AnimatedSprite2D
             open = true;
             Frame = frameOnOpen[Array.IndexOf(possibleDirs, dir)];
             GetNode<AudioStreamPlayer2D>("Sound").Play();
-            if (dir == "up")
+            if (dir == "u-")
             {
                 GetNode<AnimatedSprite2D>("UpDoor").Visible = true;
             }
