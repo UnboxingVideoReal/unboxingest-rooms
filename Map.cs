@@ -19,11 +19,16 @@ public partial class Map : Control
     {
         int wawa = 0;
         Vector2 savedPos = startPos;
+        AnimatedSprite2D rooom2 = GetNode<AnimatedSprite2D>("room").Duplicate() as AnimatedSprite2D;
+        rooom2.Modulate = new Color(1, 0, 0, 1f);
+        rooom2.ZIndex = 1001;
+        rooom2.GlobalPosition = startPos;
+        AddChild(rooom2);
+        savedPos = rooom2.GlobalPosition;
+
         foreach (string room in seededRooms)
         {
-            if (wawa != 0)
-            {
-                AnimatedSprite2D rooom = GetNode<AnimatedSprite2D>("room").Duplicate() as AnimatedSprite2D;
+            AnimatedSprite2D rooom = GetNode<AnimatedSprite2D>("room").Duplicate() as AnimatedSprite2D;
                 rooom.Modulate = new Color(1, 1, 1, 1f);
                 rooom.ZIndex = 1000;
                 AddChild(rooom);
@@ -45,32 +50,6 @@ public partial class Map : Control
                     rooom.GlobalPosition = savedPos + new Vector2(0, 5);
                 }
                 savedPos = rooom.GlobalPosition;
-            }
-            else
-            {
-                AnimatedSprite2D rooom = GetNode<AnimatedSprite2D>("room").Duplicate() as AnimatedSprite2D;
-                rooom.Modulate = new Color(1, 0, 0, 1f);
-                rooom.ZIndex = 1001;
-                AddChild(rooom);
-                string wawaw = room.Split(",")[4];
-                if (wawaw == "l-") // 1,A,a,a,l-
-                {
-                    rooom.GlobalPosition = savedPos + new Vector2(-5, 0);
-                }
-                else if (wawaw == "r-")
-                {
-                    rooom.GlobalPosition = savedPos + new Vector2(5, 0);
-                }
-                else if (wawaw == "u-")
-                {
-                    rooom.GlobalPosition = savedPos + new Vector2(0, -5);
-                }
-                else if (wawaw == "d-")
-                {
-                    rooom.GlobalPosition = savedPos + new Vector2(0, 5);
-                }
-                savedPos = rooom.GlobalPosition;
-            }
             wawa++;
         }
     }
