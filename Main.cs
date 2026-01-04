@@ -100,7 +100,7 @@ public partial class Main : Node2D
             {
                 if (i != 0)
                 {
-                    kfdsa = seed.RandiRange(0, directions.Where(x => x != $"{world[i-1].Split(",")[4][0]}").ToArray().Length - 1);
+                    kfdsa = seed.RandiRange(0, directions.Where(x => x != $"{world[i - 1].Split(",")[4][0]}").ToArray().Length - 1);
                 }
                 world.Add(i.ToString() + "," + section/*sections[seed.RandiRange(0, sections.Length - 1)]*/ + "," + section.ToLower()/*subSections[seed.RandiRange(0, subSections.Length - 1)]*/ + "," + roomTypes[seed.RandiRange(0, roomTypes.Length - 1)] + "," + directions[kfdsa] + "-");
             }
